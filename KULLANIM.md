@@ -16,7 +16,7 @@ Bu kılavuz, Mac Developer Setup scriptlerini nasıl kullanacağınızı adım a
 
 ```bash
 # Terminal açın ve şu komutu çalıştırın:
-git clone https://github.com/your-username/mac-developer-setup.git
+git clone https://github.com/drs-team/mac-developer-setup.git
 cd mac-developer-setup
 chmod +x *.sh
 ./setup.sh
@@ -27,7 +27,7 @@ Menüden **"1 - Full Setup"** seçin ve bekleyin!
 ### Tek Komutla Kurulum
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/your-username/mac-developer-setup/main/setup.sh | bash
+curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/setup.sh | bash
 ```
 
 ## 📖 Detaylı Kurulum
@@ -36,7 +36,7 @@ curl -sSL https://raw.githubusercontent.com/your-username/mac-developer-setup/ma
 
 **GitHub'dan:**
 ```bash
-git clone https://github.com/your-username/mac-developer-setup.git
+git clone https://github.com/drs-team/mac-developer-setup.git
 cd mac-developer-setup
 ```
 
@@ -201,7 +201,7 @@ cd mac-developer-setup
 git init
 git add .
 git commit -m "Mac developer setup scripts"
-git remote add origin https://github.com/username/mac-developer-setup.git
+git remote add origin https://github.com/drs-team/mac-developer-setup.git
 git push -u origin main
 ```
 
@@ -210,7 +210,7 @@ Başkalarına vereceğiniz linkler:
 
 **GitHub Repo:**
 ```
-https://github.com/username/mac-developer-setup
+https://github.com/drs-team/mac-developer-setup
 ```
 
 **Tek komut kurulum:**

@@ -6,10 +6,10 @@ Automated setup scripts for configuring a complete backend development environme
 
 ```bash
 # Clone or download the scripts
-curl -sSL https://raw.githubusercontent.com/your-repo/mac-developer-setup/main/setup.sh | bash
+curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/setup.sh | bash
 
 # Or run locally
-git clone https://github.com/your-repo/mac-developer-setup.git
+git clone https://github.com/drs-team/mac-developer-setup.git
 cd mac-developer-setup
 chmod +x *.sh
 ./setup.sh
