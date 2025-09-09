@@ -24,7 +24,13 @@ chmod +x *.sh
 - **AWS CLI** - Amazon Web Services command line interface
 - **Node.js** (via nvm) - JavaScript runtime
 - **Python 3.12** - Programming language
-- **Modern CLI tools**: `bat`, `tree`, `httpie`, `jq`, `fzf`, `ripgrep`
+- **Modern CLI tools**:
+  - `bat` - Better `cat` with syntax highlighting
+  - `tree` - Directory structure visualization
+  - `httpie` - User-friendly HTTP client
+  - `jq` - JSON processor and query tool
+  - `fzf` - Fuzzy finder for files and commands
+  - `ripgrep` - Ultra-fast text search (rg command)
 
 ### Development Environment
 - **NVM** - Node Version Manager
