@@ -37,15 +37,18 @@ chmod +x *.sh
 - **npm, yarn, pnpm** - Package managers
 - **Global packages**: TypeScript, ESLint, Prettier, PM2, AWS CDK, Serverless
 
-### Desktop Applications
-- **IDEs**: Visual Studio Code, WebStorm, Sublime Text
-- **Terminal**: iTerm2
-- **API Testing**: Postman
-- **Database Tools**: TablePlus, MongoDB Compass, NoSQL Workbench
+### Core Productivity Apps (Non-Technical)
 - **Productivity**: Notion, Linear, Figma, Raycast, Typora
 - **Communication**: Slack, Zoom, Spark (email)
 - **Security**: Keeper Password Manager
 - **Entertainment**: Spotify
+
+### Development Tools (Technical Users)
+- **IDEs**: Visual Studio Code, WebStorm, Sublime Text
+- **Terminal**: iTerm2
+- **API Testing**: Postman  
+- **Database Tools**: TablePlus, MongoDB Compass, NoSQL Workbench
+- **Containerization**: Docker Desktop
 
 ### Shell Configuration
 - **oh-my-zsh** with useful plugins
@@ -53,34 +56,45 @@ chmod +x *.sh
 - **Enhanced history** and auto-completion
 - **NVM integration** with automatic version switching
 
-## 📋 Usage Options
+## 📋 Setup Options
 
-### 1. Full Setup (Recommended)
+### 1. Quick Setup (Recommended for Most Users)
 ```bash
 ./setup.sh
-# Choose option 1 - installs everything
+# Choose option 1 - Essential productivity tools
+# Perfect for: Content creators, designers, project managers, general users
 ```
+**Installs:** Homebrew, shell enhancements, productivity apps (Notion, Slack, Figma, Raycast, etc.)
 
-### 2. Selective Setup
+### 2. Developer Setup (For Technical Users)
 ```bash
 ./setup.sh
-# Choose option 2 - pick and choose components
+# Choose option 2 - Full development environment
+# Perfect for: Backend developers, full-stack developers, DevOps engineers
 ```
+**Installs:** Everything in Quick Setup + development tools (VS Code, Docker, databases, CLI tools, Node.js)
 
-### 3. Quick Setup (Essentials Only)
+### 3. Custom Setup (Pick & Choose)
 ```bash
 ./setup.sh
-# Choose option 3 - CLI tools and development environment only
+# Choose option 3 - Modular installation
+# Perfect for: Users who want specific components only
 ```
+**Choose from:** Individual script components based on your needs
 
 ### 4. Individual Scripts
 ```bash
-# Install specific components
-./install-homebrew.sh          # Package manager only
-./install-cli-tools.sh         # Command line tools
-./setup-development.sh         # Node.js environment
-./configure-shell.sh           # Shell customization
-./install-desktop-apps.sh      # GUI applications
+# Core Components
+./install-homebrew.sh          # Package manager
+./configure-shell.sh           # Enhanced shell (oh-my-zsh)
+
+# Non-Technical Users
+./install-core-apps.sh          # Productivity apps (Notion, Slack, Figma)
+
+# Technical Users  
+./install-cli-tools.sh         # Command line tools (git, docker, aws)
+./setup-development.sh         # Node.js development environment
+./install-development-tools.sh # Development apps (VS Code, Postman, databases)
 ```
 
 ## 🛠️ Individual Script Details

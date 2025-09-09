@@ -86,23 +86,23 @@ main() {
 
     print_header "📋 SETUP MENU"
     
-    echo "Choose your setup options:"
-    echo "1. Full Setup (recommended for new Macs)"
-    echo "2. Selective Setup (choose individual components)"
-    echo "3. Quick Setup (essential tools only)"
+    echo "Choose your setup type:"
+    echo "1. Quick Setup (Essential productivity tools - recommended for most users)"
+    echo "2. Developer Setup (Full development environment)"  
+    echo "3. Custom Setup (Choose individual components)"
     echo
     
     read -p "Enter your choice (1-3): " choice
     
     case $choice in
         1)
-            full_setup
+            quick_setup
             ;;
         2)
-            selective_setup
+            developer_setup
             ;;
         3)
-            quick_setup
+            custom_setup
             ;;
         *)
             print_error "Invalid choice. Exiting."
@@ -111,28 +111,50 @@ main() {
     esac
 }
 
-# Full setup - everything
-full_setup() {
-    print_header "🚀 FULL SETUP"
+# Quick setup - productivity tools for general users
+quick_setup() {
+    print_header "⚡ QUICK SETUP (Productivity Tools)"
+    
+    run_script "install-homebrew.sh" "Homebrew installation"
+    run_script "configure-shell.sh" "Shell configuration"
+    run_script "install-core-apps.sh" "Core productivity apps installation"
+    
+    print_status "Quick setup complete! Perfect for general productivity work."
+    
+    setup_complete
+}
+
+# Developer setup - full development environment
+developer_setup() {
+    print_header "💻 DEVELOPER SETUP"
     
     run_script "install-homebrew.sh" "Homebrew installation"
     run_script "install-cli-tools.sh" "CLI tools installation"
     run_script "setup-development.sh" "Development environment setup"
     run_script "configure-shell.sh" "Shell configuration"
-    run_script "install-desktop-apps.sh" "Desktop applications installation"
+    run_script "install-core-apps.sh" "Core productivity apps installation"
+    run_script "install-development-tools.sh" "Development tools installation"
     
     setup_complete
 }
 
-# Selective setup - let user choose
-selective_setup() {
-    print_header "🎯 SELECTIVE SETUP"
+# Custom setup - let user choose individual components
+custom_setup() {
+    print_header "🎯 CUSTOM SETUP"
     
     if ask_user "Install Homebrew package manager?"; then
         run_script "install-homebrew.sh" "Homebrew installation"
     fi
     
-    if ask_user "Install command line tools (git, docker, aws-cli, etc.)?"; then
+    if ask_user "Configure enhanced shell (oh-my-zsh, aliases, plugins)?"; then
+        run_script "configure-shell.sh" "Shell configuration"
+    fi
+    
+    if ask_user "Install core productivity apps (Notion, Slack, Figma, etc.)?"; then
+        run_script "install-core-apps.sh" "Core productivity apps installation"
+    fi
+    
+    if ask_user "Install command line development tools (git, docker, aws-cli, etc.)?"; then
         run_script "install-cli-tools.sh" "CLI tools installation"
     fi
     
@@ -140,29 +162,8 @@ selective_setup() {
         run_script "setup-development.sh" "Development environment setup"
     fi
     
-    if ask_user "Configure enhanced shell (oh-my-zsh, aliases, plugins)?"; then
-        run_script "configure-shell.sh" "Shell configuration"
-    fi
-    
-    if ask_user "Install desktop applications (VS Code, WebStorm, Postman, etc.)?"; then
-        run_script "install-desktop-apps.sh" "Desktop applications installation"
-    fi
-    
-    setup_complete
-}
-
-# Quick setup - essentials only
-quick_setup() {
-    print_header "⚡ QUICK SETUP"
-    
-    run_script "install-homebrew.sh" "Homebrew installation"
-    run_script "install-cli-tools.sh" "CLI tools installation"
-    run_script "setup-development.sh" "Development environment setup"
-    
-    print_status "Quick setup complete! You can run individual scripts later for more tools."
-    
-    if ask_user "Would you like to configure the shell environment now?"; then
-        run_script "configure-shell.sh" "Shell configuration"
+    if ask_user "Install development tools (VS Code, WebStorm, Postman, etc.)?"; then
+        run_script "install-development-tools.sh" "Development tools installation"
     fi
     
     setup_complete

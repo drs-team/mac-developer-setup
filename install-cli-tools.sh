@@ -31,7 +31,7 @@ CLI_TOOLS=(
 # Install CLI tools
 for tool in "${CLI_TOOLS[@]}"; do
     if brew list "$tool" >/dev/null 2>&1; then
-        echo "✅ $tool already installed"
+        echo "✅ $tool already installed - skipping"
     else
         echo "📥 Installing $tool..."
         brew install "$tool"
