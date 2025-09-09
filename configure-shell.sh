@@ -189,6 +189,8 @@ if [[ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]]; the
     echo "📥 Installing Powerlevel10k theme..."
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
     echo "💡 To use Powerlevel10k, change ZSH_THEME to 'powerlevel10k/powerlevel10k' in ~/.zshrc"
+else
+    echo "✅ Powerlevel10k theme already installed - skipping"
 fi
 
 echo "🔧 Installing useful zsh plugins..."
@@ -197,12 +199,16 @@ echo "🔧 Installing useful zsh plugins..."
 if [[ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]]; then
     echo "📥 Installing zsh-syntax-highlighting..."
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+else
+    echo "✅ zsh-syntax-highlighting already installed - skipping"
 fi
 
 # Install zsh-autosuggestions
 if [[ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]]; then
     echo "📥 Installing zsh-autosuggestions..."
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+else
+    echo "✅ zsh-autosuggestions already installed - skipping"
 fi
 
 echo "🎉 Shell configuration complete!"
