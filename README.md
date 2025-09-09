@@ -4,16 +4,21 @@ Automated setup scripts for configuring a complete backend development environme
 
 ## 🚀 Quick Start
 
+### One-Command Install (Recommended)
 ```bash
-# Clone or download the scripts
-curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/setup.sh | bash
+# Installs essential productivity tools automatically
+curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/quick-install.sh | bash
+```
+**Perfect for:** Most users, designers, content creators, project managers
 
-# Or run locally
+### Interactive Setup (Advanced)
+```bash
+# Choose your specific setup type
 git clone https://github.com/drs-team/mac-developer-setup.git
 cd mac-developer-setup
-chmod +x *.sh
 ./setup.sh
 ```
+**Perfect for:** Developers or users who want to customize installation
 
 ## 📦 What Gets Installed
 
@@ -58,29 +63,30 @@ chmod +x *.sh
 
 ## 📋 Setup Options
 
-### 1. Quick Setup (Recommended for Most Users)
+### 1. One-Command Install (Default)
 ```bash
-./setup.sh
-# Choose option 1 - Essential productivity tools
-# Perfect for: Content creators, designers, project managers, general users
+curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/quick-install.sh | bash
 ```
-**Installs:** Homebrew, shell enhancements, productivity apps (Notion, Slack, Figma, Raycast, etc.)
+**Installs:** Homebrew, enhanced shell, productivity apps (Notion, Slack, Figma, Raycast, etc.)  
+**Perfect for:** Most users, non-technical users, quick setup
 
-### 2. Developer Setup (For Technical Users)
+### 2. Interactive Developer Setup
 ```bash
-./setup.sh
+git clone https://github.com/drs-team/mac-developer-setup.git
+cd mac-developer-setup && ./setup.sh
 # Choose option 2 - Full development environment
-# Perfect for: Backend developers, full-stack developers, DevOps engineers
 ```
-**Installs:** Everything in Quick Setup + development tools (VS Code, Docker, databases, CLI tools, Node.js)
+**Installs:** Everything above + development tools (VS Code, Docker, databases, CLI tools, Node.js)  
+**Perfect for:** Backend developers, full-stack developers, DevOps engineers
 
-### 3. Custom Setup (Pick & Choose)
+### 3. Custom Modular Setup
 ```bash
-./setup.sh
-# Choose option 3 - Modular installation
-# Perfect for: Users who want specific components only
+git clone https://github.com/drs-team/mac-developer-setup.git
+cd mac-developer-setup && ./setup.sh
+# Choose option 3 - Pick individual components
 ```
-**Choose from:** Individual script components based on your needs
+**Choose from:** Any combination of script components  
+**Perfect for:** Users who want specific tools only
 
 ### 4. Individual Scripts
 ```bash
