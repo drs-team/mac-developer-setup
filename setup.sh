@@ -36,6 +36,12 @@ print_header() {
 
 # Function to ask user for confirmation
 ask_user() {
+    # If running non-interactively (piped), default to yes
+    if [ ! -t 0 ]; then
+        echo "$(echo -e ${CYAN}$1${NC}) [y/n]: y (auto-selected)"
+        return 0
+    fi
+    
     while true; do
         read -p "$(echo -e ${CYAN}$1${NC}) [y/n]: " yn
         case $yn in
@@ -92,7 +98,13 @@ main() {
     echo "3. Custom Setup (Choose individual components)"
     echo
     
-    read -p "Enter your choice (1-3): " choice
+    # If running non-interactively, default to Quick Setup
+    if [ ! -t 0 ]; then
+        choice=1
+        echo "Enter your choice (1-3): 1 (auto-selected Quick Setup)"
+    else
+        read -p "Enter your choice (1-3): " choice
+    fi
     
     case $choice in
         1)
