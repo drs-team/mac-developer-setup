@@ -85,9 +85,14 @@ main() {
     echo "• Enhanced shell configuration (oh-my-zsh)"
     echo
     
-    if ! ask_user "Do you want to continue with the full setup?"; then
-        echo "Setup cancelled by user."
-        exit 0
+    # Skip user confirmation if running non-interactively
+    if [ -t 0 ]; then
+        if ! ask_user "Do you want to continue with the full setup?"; then
+            echo "Setup cancelled by user."
+            exit 0
+        fi
+    else
+        echo "$(echo -e ${CYAN}"Do you want to continue with the full setup?"${NC}) [y/n]: y (auto-selected)"
     fi
 
     print_header "📋 SETUP MENU"

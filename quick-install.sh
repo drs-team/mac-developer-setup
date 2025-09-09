@@ -74,7 +74,7 @@ main() {
         "linear-linear:Linear.app:Linear"
         "figma:Figma.app:Figma"
         "raycast:Raycast.app:Raycast"
-        "typora:Typora.app:Typora"
+        "mark-text:Mark Text.app:Mark Text"
         "readdle-spark:Spark Desktop.app:Spark Email"
         "slack:Slack.app:Slack"
         "zoom:zoom.us.app:Zoom"

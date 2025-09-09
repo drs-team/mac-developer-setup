@@ -21,7 +21,7 @@ CORE_APPS=(
     "linear-linear"             # Issue tracking and project management  
     "figma"                     # Design and wireframing
     "raycast"                   # Spotlight replacement with powerful extensions
-    "typora"                    # Markdown editor
+    "mark-text"                 # Free markdown editor (Typora alternative)
     "readdle-spark"             # Email client
     "slack"                     # Team communication
     "zoom"                      # Video conferencing
@@ -55,7 +55,7 @@ install_apps "${CORE_APPS[@]}"
 echo "🎉 Core Apps installation complete!"
 
 echo "📋 Installed Applications:"
-echo "📝 Productivity: Notion, Linear, Figma, Raycast, Typora"
+echo "📝 Productivity: Notion, Linear, Figma, Raycast, Mark Text"
 echo "📧 Communication: Spark (email), Slack, Zoom"
 echo "🎵 Entertainment: Spotify"
 echo "🔐 Security: Keeper Password Manager"

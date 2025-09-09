@@ -37,7 +37,7 @@ cd mac-developer-setup
 - **Linear** - Project and task management  
 - **Figma** - Design and wireframing
 - **Raycast** - Powerful Spotlight replacement
-- **Typora** - Markdown editor
+- **Mark Text** - Free markdown editor
 
 **Communication & Collaboration:**
 - **Slack** - Team communication
