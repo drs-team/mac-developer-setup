@@ -49,17 +49,78 @@ main() {
     
     echo -e "${GREEN}Your Mac is now configured with essential productivity tools!${NC}"
     echo
-    echo "📋 What was installed:"
-    echo "• Package manager: Homebrew"
-    echo "• Enhanced shell: oh-my-zsh with plugins"
-    echo "• Productivity: Notion, Linear, Figma, Raycast, Typora"
-    echo "• Communication: Slack, Zoom, Spark (email)"
-    echo "• Security: Keeper Password Manager"
-    echo "• Entertainment: Spotify"
+    
+    # Generate installation summary
+    echo "📊 INSTALLATION SUMMARY"
+    echo "========================"
     echo
-    echo "🔄 Next steps:"
+    echo "✅ SUCCESSFULLY INSTALLED:"
+    
+    # Check Homebrew
+    if command -v brew >/dev/null 2>&1; then
+        echo "• ✅ Homebrew ($(brew --version | head -1))"
+    fi
+    
+    # Check oh-my-zsh
+    if [[ -d "$HOME/.oh-my-zsh" ]]; then
+        echo "• ✅ oh-my-zsh with plugins and themes"
+    fi
+    
+    # Check applications
+    local installed_apps=()
+    local failed_apps=()
+    local app_checks=(
+        "notion:Notion.app:Notion"
+        "linear-linear:Linear.app:Linear"
+        "figma:Figma.app:Figma"
+        "raycast:Raycast.app:Raycast"
+        "typora:Typora.app:Typora"
+        "readdle-spark:Spark Desktop.app:Spark Email"
+        "slack:Slack.app:Slack"
+        "zoom:zoom.us.app:Zoom"
+        "spotify:Spotify.app:Spotify"
+        "keeper-password-manager:Keeper Password Manager.app:Keeper"
+    )
+    
+    for app_info in "${app_checks[@]}"; do
+        IFS=':' read -r cask_name app_name display_name <<< "$app_info"
+        if [[ -d "/Applications/$app_name" ]]; then
+            installed_apps+=("$display_name")
+            echo "• ✅ $display_name"
+        else
+            failed_apps+=("$display_name")
+        fi
+    done
+    
+    if [ ${#failed_apps[@]} -gt 0 ]; then
+        echo
+        echo "⚠️  NOT INSTALLED (manual installation needed):"
+        for app in "${failed_apps[@]}"; do
+            echo "• ❌ $app"
+        done
+        echo
+        echo "💡 To install missing apps manually:"
+        for app_info in "${app_checks[@]}"; do
+            IFS=':' read -r cask_name app_name display_name <<< "$app_info"
+            if [[ ! -d "/Applications/$app_name" ]]; then
+                echo "   brew install --cask $cask_name  # for $display_name"
+            fi
+        done
+    fi
+    
+    echo
+    echo "📈 INSTALLATION STATS:"
+    echo "• Total apps attempted: ${#app_checks[@]}"
+    echo "• Successfully installed: ${#installed_apps[@]}"
+    echo "• Failed installations: ${#failed_apps[@]}"
+    
+    echo
+    echo "🔄 NEXT STEPS:"
     echo "1. Restart your terminal or run: source ~/.zshrc"
-    echo "2. Open applications and complete setup"
+    echo "2. Open installed applications and complete setup"
+    if [ ${#failed_apps[@]} -gt 0 ]; then
+        echo "3. Install missing apps using the commands above"
+    fi
     echo
     echo "💻 Want development tools? Run:"
     echo "git clone https://github.com/drs-team/mac-developer-setup.git"
