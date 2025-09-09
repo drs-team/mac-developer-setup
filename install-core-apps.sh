@@ -33,7 +33,10 @@ CORE_APPS=(
 install_apps() {
     local app_list=("$@")
     for app in "${app_list[@]}"; do
-        if brew list --cask "$app" >/dev/null 2>&1; then
+        # Special case for raycast - check Applications folder too
+        if [[ "$app" == "raycast" ]] && [[ -d "/Applications/Raycast.app" ]]; then
+            echo "✅ raycast already installed (found in Applications) - skipping"
+        elif brew list --cask "$app" >/dev/null 2>&1; then
             echo "✅ $app already installed - skipping"
         else
             echo "📥 Installing $app..."
