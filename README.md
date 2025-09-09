@@ -11,6 +11,12 @@ curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/qu
 ```
 **Perfect for:** Most users, designers, content creators, project managers
 
+**Features:**
+- ✅ **Smart Detection**: Skips already installed apps
+- ✅ **Installation Report**: Shows success/failure summary  
+- ✅ **Manual Commands**: Provides brew commands for failed installs
+- ✅ **No Input Required**: Fully automated, no questions asked
+
 ### Interactive Setup (Advanced)
 ```bash
 # Choose your specific setup type
@@ -69,6 +75,30 @@ curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/qu
 ```
 **Installs:** Homebrew, enhanced shell, productivity apps (Notion, Slack, Figma, Raycast, etc.)  
 **Perfect for:** Most users, non-technical users, quick setup
+
+**What you'll see at the end:**
+```
+📊 INSTALLATION SUMMARY
+========================
+✅ SUCCESSFULLY INSTALLED:
+• ✅ Homebrew (Homebrew 4.6.10)
+• ✅ oh-my-zsh with plugins and themes
+• ✅ Notion
+• ✅ Figma
+• ✅ Raycast
+...
+
+⚠️  NOT INSTALLED (manual installation needed):
+• ❌ Some App
+
+💡 To install missing apps manually:
+   brew install --cask some-app  # for Some App
+
+📈 INSTALLATION STATS:
+• Total apps attempted: 10
+• Successfully installed: 8
+• Failed installations: 2
+```
 
 ### 2. Interactive Developer Setup
 ```bash
