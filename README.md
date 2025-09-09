@@ -1,6 +1,8 @@
-# 🍎 Mac Developer Setup
+# 🍎 Mac Productivity Setup
 
-Automated setup scripts for configuring a complete backend development environment on macOS. Perfect for new Macs or clean installations.
+Automated setup scripts for configuring essential productivity tools and applications on macOS. Perfect for designers, content creators, project managers, and anyone wanting to quickly set up a new Mac with useful applications.
+
+**Also includes:** Complete backend development environment for developers.
 
 ## 🚀 Quick Start
 
@@ -28,44 +30,50 @@ cd mac-developer-setup
 
 ## 📦 What Gets Installed
 
-### Command Line Tools
+### 🎯 Quick Install (Default - Perfect for Everyone)
+
+**Essential Productivity Apps:**
+- **Notion** - Documentation and note-taking
+- **Linear** - Project and task management  
+- **Figma** - Design and wireframing
+- **Raycast** - Powerful Spotlight replacement
+- **Typora** - Markdown editor
+
+**Communication & Collaboration:**
+- **Slack** - Team communication
+- **Zoom** - Video conferencing
+- **Spark** - Email client
+
+**Security & Entertainment:**
+- **Keeper Password Manager** - Secure password management
+- **Spotify** - Music streaming
+
+**System Enhancements:**
 - **Homebrew** - macOS package manager
+- **oh-my-zsh** - Enhanced terminal with plugins and themes
+- **Shell improvements** - Custom aliases, functions, and productivity shortcuts
+
+### 💻 Developer Setup (Advanced - For Technical Users)
+
+**Everything above PLUS:**
+
+**Development Tools:**
+- **Visual Studio Code, WebStorm, Sublime Text** - Code editors
+- **iTerm2** - Advanced terminal
+- **Postman** - API testing
+- **Docker Desktop** - Containerization
+
+**Database Tools:**
+- **TablePlus** - Database management
+- **MongoDB Compass** - MongoDB GUI  
+- **NoSQL Workbench** - DynamoDB GUI
+
+**Command Line Development Tools:**
 - **Git** - Version control
-- **Docker** - Containerization CLI
-- **AWS CLI** - Amazon Web Services command line interface
-- **Node.js** (via nvm) - JavaScript runtime
+- **Node.js** (via nvm) - JavaScript runtime with package managers
 - **Python 3.12** - Programming language
-- **Modern CLI tools**:
-  - `bat` - Better `cat` with syntax highlighting
-  - `tree` - Directory structure visualization
-  - `httpie` - User-friendly HTTP client
-  - `jq` - JSON processor and query tool
-  - `fzf` - Fuzzy finder for files and commands
-  - `ripgrep` - Ultra-fast text search (rg command)
-
-### Development Environment
-- **NVM** - Node Version Manager
-- **npm, yarn, pnpm** - Package managers
-- **Global packages**: TypeScript, ESLint, Prettier, PM2, AWS CDK, Serverless
-
-### Core Productivity Apps (Non-Technical)
-- **Productivity**: Notion, Linear, Figma, Raycast, Typora
-- **Communication**: Slack, Zoom, Spark (email)
-- **Security**: Keeper Password Manager
-- **Entertainment**: Spotify
-
-### Development Tools (Technical Users)
-- **IDEs**: Visual Studio Code, WebStorm, Sublime Text
-- **Terminal**: iTerm2
-- **API Testing**: Postman  
-- **Database Tools**: TablePlus, MongoDB Compass, NoSQL Workbench
-- **Containerization**: Docker Desktop
-
-### Shell Configuration
-- **oh-my-zsh** with useful plugins
-- **Custom aliases** for development workflows
-- **Enhanced history** and auto-completion
-- **NVM integration** with automatic version switching
+- **Docker CLI, AWS CLI** - Cloud development tools
+- **Modern CLI tools**: `bat`, `tree`, `httpie`, `jq`, `fzf`, `ripgrep`
 
 ## 📋 Setup Options
 
@@ -100,14 +108,14 @@ curl -sSL https://raw.githubusercontent.com/drs-team/mac-developer-setup/main/qu
 • Failed installations: 2
 ```
 
-### 2. Interactive Developer Setup
+### 2. Interactive Developer Setup (Advanced)
 ```bash
 git clone https://github.com/drs-team/mac-developer-setup.git
 cd mac-developer-setup && ./setup.sh
 # Choose option 2 - Full development environment
 ```
-**Installs:** Everything above + development tools (VS Code, Docker, databases, CLI tools, Node.js)  
-**Perfect for:** Backend developers, full-stack developers, DevOps engineers
+**Installs:** All productivity apps + development tools (VS Code, Docker, databases, CLI tools, Node.js)  
+**Perfect for:** Developers, engineers, technical users who need coding tools
 
 ### 3. Custom Modular Setup
 ```bash
